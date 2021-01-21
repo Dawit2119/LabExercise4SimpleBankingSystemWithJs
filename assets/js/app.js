@@ -31,5 +31,20 @@ var BankAccount = {
         } 
         else "You haven't enough balance to make transfer you inquired"
     }
+    var choice = prompt("<----------Banking System---------->\n1: to create Bank Account\n2:to deposit to your account\n3:to withdraw\n4:to check your balance\n5: to transfer to beneficiary")
+    switch(choice){
+        case 1:{
+           let accountName =  prompt("Enter your name")
+           let accountNUmber = prompt("set your account number")
+           let balance = parseInt(prompt("your Initial balance"))
+           createAccount(accountName,accountNUmber,balance)
+           alert("your account created successfuly\nAccount name: %s\nAccount number: %s\nBalance: %d",accountName,accountNUmber,balance)
+        }break
+        case 2:{
+            let amount = parseInt(prompt("Enter how much do you want to deposit"))
+            deposit(amount)
+            alert("deposit successfully done\n your current balance is %d",BankAccount.balance)
+        }
+    }
 
 })();
