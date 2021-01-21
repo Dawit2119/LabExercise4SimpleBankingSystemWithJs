@@ -7,7 +7,11 @@ var BankAccount = {
     function createAccount(accountName,accountNUmber,balance){
         BankAccount.accountName = accountName;
         BankAccount.accountNUmber = accountNUmber;
-        B
+        BankAccount.balance = balance
+    }
+    function deposit(balance){
+        BankAccount.
+
     }
 
 })();
