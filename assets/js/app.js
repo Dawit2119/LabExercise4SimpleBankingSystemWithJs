@@ -5,13 +5,11 @@
         balance : 0
     }
     function createAccount(accountName,accountNUmber,balance){
-        if (BankAccount.accountNUmber != ""){
         BankAccount.accountName = accountName;
         BankAccount.accountNUmber = accountNUmber;
         BankAccount.balance = balance
         alert("your account created successfuly\nAccount name: " + accountName +"\nAccount number "+accountNUmber+"\nBalance: " + balance)
-    }
-        else alert("Account number already exits\nonly one account is available in this application")
+    
     }
     function deposit(balance){
         
@@ -52,10 +50,13 @@
     while(choice){
     switch(choice){
         case 1:{
+           if(BankAccount.accountNUmber == " ")  {
            let accountName =  prompt("Enter your name")
            let accountNUmber = prompt("set your account number")
            let balance = parseInt(prompt("your Initial balance"))
            createAccount(accountName,accountNUmber,balance)
+           }
+           else alert("Account number already exits\nonly one account is available in this application")
            getServices();
         };break;
         case 2:{
